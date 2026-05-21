@@ -26,7 +26,9 @@ export default function Jogador1(){
   //função para diminuir um ponto
   function diminuir(){
     //pega o valor atual e subtrai 1
+    if(pontos > 0){
     setPontos(pontos-1)
+    }
   }
   //função para resetar o contador
   function resetar(){
