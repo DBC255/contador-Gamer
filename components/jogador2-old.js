@@ -12,14 +12,13 @@ import {
 } from "react-native-web";
 
 //Componentes primcipal APP
-export default function Jogadores3() {
+export default function Jogadores2() {
     //Cria uma estado(variavel php) chamado "pontos"
     //pontos = Valor atual
     //setPontos = função para alterar o valor
     //0 = valor inicial
     const [pontos1, setPontos1] = useState(0);
     const [pontos2, setPontos2] = useState(0);
-    const [pontos3, setPontos3] = useState(0);
     //Função para aumentar 1 ponto
     function aumentar1() {
         //pega o valor atual e soma 1
@@ -58,29 +57,13 @@ export default function Jogadores3() {
         //volta o valor para 0
         setPontos2(0)
     }
-    function aumentar3() {
-        //pega o valor atual e soma 1
-        setPontos3(pontos3 + 1);
-    }
-    //função para diminuir um ponto
-    function diminuir3() {
-        //pega o valor atual e subtrai 1
-        if (pontos3 > 0) {
-            setPontos3(pontos3 - 1)
-        }
-    }
-    //função para resetar o contador
-    function resetar3() {
-        //volta o valor para 0
-        setPontos3(0)
-    }
 
 
 
     //tudo que esta no return aparece na tela
     return (
         // View principal do app
-        <View style={styles.container}>
+        <View  style={styles.container}>
             <Text style={styles.titulo}>
                 🎮 Contador Gamer
             </Text>
@@ -135,32 +118,7 @@ export default function Jogadores3() {
                             <Text style={styles.textoBotao}>Resetar</Text>
                         </TouchableOpacity>
                     </View>
-                    {/* área do botão resetar */}
-
-                </View>
-                <View style={styles.container}>
-                    <Text style={styles.titulo}>
-                        Jogador 3
-                    </Text>
-
-                    {/* Mostra o valor dos pontos */}
-                    <Text style={styles.pontos}>{pontos3}</Text>
-
-                    {/* área dos botões +1 e -1 onPress é quando clica no botão */}
-                    <View style={styles.areaBotoes}>
-                        <TouchableOpacity onPress={aumentar3} style={styles.botao}>
-                            <Text style={styles.textoBotao}>+1</Text>
-                        </TouchableOpacity>
-
-                        <TouchableOpacity onPress={diminuir3} style={styles.botao}>
-                            <Text style={styles.textoBotao}>-1</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity onPress={resetar3} style={styles.botaoReset} >
-                            <Text style={styles.textoBotao}>Resetar</Text>
-                        </TouchableOpacity>
-                    </View>
-                    {/* área do botão resetar */}
-
+                        
                 </View>
             </View>
         </View>

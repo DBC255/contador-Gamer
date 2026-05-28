@@ -70,57 +70,61 @@ export default function Jogador1(){
 
 // ÁREA DE ESTILOS DO APP
 const styles = StyleSheet.create({
-  // ESTILO DA TELA PRINCIPAL
-  container: {
-    flex: 1,// OCUPA A TELA TODA
-    backgroundColor: '#121212',//COR DE FUNDO
-    alignItems: 'center', //CENTRALIZA HORIZONTALMENTE
-    justifyContent: 'center',// CENTRALIZA VERTICALMENTE
-    padding: 20,// ESPAÇAMENTO INTERNO
-  },
+    // ESTILO DA TELA PRINCIPAL
+    container: {
+        flex: 1,// OCUPA A TELA TODA
+        backgroundColor: '#121212',//COR DE FUNDO
+        alignItems: 'center', //CENTRALIZA HORIZONTALMENTE
+        justifyContent: 'center',// CENTRALIZA VERTICALMENTE
+        padding: 20,// ESPAÇAMENTO INTERNO
+    },
 
-  //ESTILO DO TITULO
-  titulo: {
-    fontSize: 32,// TAMANHO DA FONTE
-    color: '#00ff88',// COR DO TEXTO
-    fontWeight: 'bold',// TEXTO EM NEGRITO
-    marginBottom: 30,// ESPAÇO ABAIXO
-  },
-  //ESTILO DOS PONTOS
-  pontos: {
-    fontSize: 80,//TAMANHO GIGANTE
-    color: '#ffffff',// COR BRANCA
-    marginBottom: 40,// ESPAÇO ABAIXO
-    fontWeight: 'bold',// NEGRITO
-  },
+    lado_lado: {
+        flexDirection: 'row', // deixa os elementos em linha
+    },
 
-  //ÁREA DOS BOTÕES
-  areaBotoes: {
-    flexDirection: 'row',// DEIXA UM BOTÃO AO LADO DO OUTRO
-    marginBottom: 20,// ESPAÇO ABAIXO
-  },
+    //ESTILO DO TITULO
+    titulo: {
+        fontSize: 32,// TAMANHO DA FONTE
+        color: '#e1ff00ff',// COR DO TEXTO
+        fontWeight: 'bold',// TEXTO EM NEGRITO
+        marginBottom: 30,// ESPAÇO ABAIXO
+    },
+    //ESTILO DOS PONTOS
+    pontos: {
+        fontSize: 80,//TAMANHO GIGANTE
+        color: '#ffffff',// COR BRANCA
+        marginBottom: 40,// ESPAÇO ABAIXO
+        fontWeight: 'bold',// NEGRITO
+    },
 
-  // ESTILO DOS BOTÕES +1 E -1
-  botao: {
-    backgroundColor: '#00ff88',//COR DO BOTÃO
-    paddingVertical: 15,// ESPAÇAMENTO VERTICAL
-    paddingHorizontal: 30,//ESPAÇAMENTO HORIZONTAL
-    borderRadius: 12,//ARREDONDAMENTO DE BORDAS
-    marginHorizontal: 10,// ESPAÇO ENTRE BOTÕES
-  },
+    //ÁREA DOS BOTÕES
+    areaBotoes: {
+        flexDirection: 'row',// DEIXA UM BOTÃO AO LADO DO OUTRO
+        marginBottom: 20,// ESPAÇO ABAIXO
+    },
 
-  // ESTILO DO BOTÃO DE RESET
-  botaoReset: {
-    backgroundColor: '#ff3b30',// COR VERMELHA
-    paddingVertical: 15,// ESPAÇAMENTO VERTICAL
-    paddingHorizontal: 40,//ESPAÇAMENTO HORIZONTAL
-    borderRadius: 12,//BORDAS ARREDONDADAS
-  },
+    // ESTILO DOS BOTÕES +1 E -1
+    botao: {
+        backgroundColor: '#1d12e9ff',//COR DO BOTÃO
+        paddingVertical: 10,// ESPAÇAMENTO VERTICAL
+        paddingHorizontal: 20,//ESPAÇAMENTO HORIZONTAL
+        borderRadius: 12,//ARREDONDAMENTO DE BORDAS
+        marginHorizontal: 10,// ESPAÇO ENTRE BOTÕES
+    },
 
-  //ESTILO DO TEXTO DOS BOTÕES
-  textoBotao: {
-    fontSize: 22,// TAMANHO DAS LETRA
-    color: '#000',// COR DE TEXTO
-    fontWeight: 'bold',// NEGRITO
-  },
+    // ESTILO DO BOTÃO DE RESET
+    botaoReset: {
+        backgroundColor: '#fe0d00ff',// COR VERMELHA
+        paddingVertical: 15,// ESPAÇAMENTO VERTICAL
+        paddingHorizontal: 40,//ESPAÇAMENTO HORIZONTAL
+        borderRadius: 12,//BORDAS ARREDONDADAS
+    },
+
+    //ESTILO DO TEXTO DOS BOTÕES
+    textoBotao: {
+        fontSize: 22,// TAMANHO DAS LETRA
+        color: '#000',// COR DE TEXTO
+        fontWeight: 'bold',// NEGRITO
+    },
 });

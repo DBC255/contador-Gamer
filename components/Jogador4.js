@@ -20,6 +20,7 @@ export default function Jogadores3() {
     const [pontos1, setPontos1] = useState(0);
     const [pontos2, setPontos2] = useState(0);
     const [pontos3, setPontos3] = useState(0);
+    const [pontos4, setPontos4] = useState(0)
     //Função para aumentar 1 ponto
     function aumentar1() {
         //pega o valor atual e soma 1
@@ -73,6 +74,23 @@ export default function Jogadores3() {
     function resetar3() {
         //volta o valor para 0
         setPontos3(0)
+    }
+
+    function aumentar4() {
+        //pega o valor atual e soma 1
+        setPontos4(pontos4 + 1);
+    }
+    //função para diminuir um ponto
+    function diminuir4() {
+        //pega o valor atual e subtrai 1
+        if (pontos4 > 0) {
+            setPontos4(pontos4 - 1)
+        }
+    }
+    //função para resetar o contador
+    function resetar4() {
+        //volta o valor para 0
+        setPontos4(0)
     }
 
 
@@ -138,6 +156,8 @@ export default function Jogadores3() {
                     {/* área do botão resetar */}
 
                 </View>
+
+                
                 <View style={styles.container}>
                     <Text style={styles.titulo}>
                         Jogador 3
@@ -159,8 +179,33 @@ export default function Jogadores3() {
                             <Text style={styles.textoBotao}>Resetar</Text>
                         </TouchableOpacity>
                     </View>
-                    {/* área do botão resetar */}
 
+                    
+                </View>
+
+                <View style={styles.container}>
+                    <Text style={styles.titulo}>
+                        Jogador 4
+                    </Text>
+
+                    {/* Mostra o valor dos pontos */}
+                    <Text style={styles.pontos}>{pontos4}</Text>
+
+                    {/* área dos botões +1 e -1 onPress é quando clica no botão */}
+                    <View style={styles.areaBotoes}>
+                        <TouchableOpacity onPress={aumentar4} style={styles.botao}>
+                            <Text style={styles.textoBotao}>+1</Text>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity onPress={diminuir4} style={styles.botao}>
+                            <Text style={styles.textoBotao}>-1</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={resetar4} style={styles.botaoReset} >
+                            <Text style={styles.textoBotao}>Resetar</Text>
+                        </TouchableOpacity>
+                    </View>
+
+                    
                 </View>
             </View>
         </View>
@@ -208,8 +253,8 @@ const styles = StyleSheet.create({
     // ESTILO DOS BOTÕES +1 E -1
     botao: {
         backgroundColor: '#1d12e9ff',//COR DO BOTÃO
-        paddingVertical: 15,// ESPAÇAMENTO VERTICAL
-        paddingHorizontal: 30,//ESPAÇAMENTO HORIZONTAL
+        paddingVertical: 10,// ESPAÇAMENTO VERTICAL
+        paddingHorizontal: 20,//ESPAÇAMENTO HORIZONTAL
         borderRadius: 12,//ARREDONDAMENTO DE BORDAS
         marginHorizontal: 10,// ESPAÇO ENTRE BOTÕES
     },
